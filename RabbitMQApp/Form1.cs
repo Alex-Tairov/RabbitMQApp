@@ -30,5 +30,13 @@ namespace RabbitMQApp
             connectionFactory.DispatchConsumersAsync = true;
             _rabbitMqConnection = connectionFactory.CreateConnection("DemoAppClient");
         }
+
+        private void btnCreateExchange_Click(object sender, EventArgs e)
+        {
+            using (var channel = _rabbitMqConnection.CreateModel())
+            {
+                channel.ExchangeDeclare("CustomerNotification", ExchangeType.Direct, true, false);
+            }
+        }
     }
 }
