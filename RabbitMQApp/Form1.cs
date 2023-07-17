@@ -20,7 +20,8 @@ namespace RabbitMQApp
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+     
+        private void btnConnectRabbitMq_Click(object sender, EventArgs e)
         {
             var connectionString = ConfigurationManager.ConnectionStrings["RabbitMqConnection"].ConnectionString;
             var connectionFactory = new ConnectionFactory();

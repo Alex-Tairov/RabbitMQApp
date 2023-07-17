@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConnectRabbitMq = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnConnectRabbitMq
             // 
-            this.button1.Location = new System.Drawing.Point(64, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 70);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Connect RabbitMQ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConnectRabbitMq.Location = new System.Drawing.Point(64, 46);
+            this.btnConnectRabbitMq.Name = "btnConnectRabbitMq";
+            this.btnConnectRabbitMq.Size = new System.Drawing.Size(206, 70);
+            this.btnConnectRabbitMq.TabIndex = 0;
+            this.btnConnectRabbitMq.Text = "Connect RabbitMQ";
+            this.btnConnectRabbitMq.UseVisualStyleBackColor = true;
+            this.btnConnectRabbitMq.Click += new System.EventHandler(this.btnConnectRabbitMq_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConnectRabbitMq);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -55,7 +55,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConnectRabbitMq;
     }
 }
 
