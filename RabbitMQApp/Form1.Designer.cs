@@ -38,13 +38,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxPublishSms = new System.Windows.Forms.TextBox();
             this.btnPublishSMS = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lstEmailMessages = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lstSmsMessages = new System.Windows.Forms.ListBox();
+            this.btnSubscribeEmailQueue = new System.Windows.Forms.Button();
+            this.btnSubscribeSmsQueue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnectRabbitMq
             // 
-            this.btnConnectRabbitMq.Location = new System.Drawing.Point(61, 12);
+            this.btnConnectRabbitMq.Location = new System.Drawing.Point(12, 12);
             this.btnConnectRabbitMq.Name = "btnConnectRabbitMq";
-            this.btnConnectRabbitMq.Size = new System.Drawing.Size(206, 34);
+            this.btnConnectRabbitMq.Size = new System.Drawing.Size(220, 40);
             this.btnConnectRabbitMq.TabIndex = 0;
             this.btnConnectRabbitMq.Text = "Connect RabbitMQ";
             this.btnConnectRabbitMq.UseVisualStyleBackColor = true;
@@ -52,9 +58,9 @@
             // 
             // btnCreateExchange
             // 
-            this.btnCreateExchange.Location = new System.Drawing.Point(61, 72);
+            this.btnCreateExchange.Location = new System.Drawing.Point(12, 72);
             this.btnCreateExchange.Name = "btnCreateExchange";
-            this.btnCreateExchange.Size = new System.Drawing.Size(206, 29);
+            this.btnCreateExchange.Size = new System.Drawing.Size(220, 40);
             this.btnCreateExchange.TabIndex = 1;
             this.btnCreateExchange.Text = "Create Exchange";
             this.btnCreateExchange.UseVisualStyleBackColor = true;
@@ -62,9 +68,9 @@
             // 
             // btnCreateQueues
             // 
-            this.btnCreateQueues.Location = new System.Drawing.Point(61, 124);
+            this.btnCreateQueues.Location = new System.Drawing.Point(12, 124);
             this.btnCreateQueues.Name = "btnCreateQueues";
-            this.btnCreateQueues.Size = new System.Drawing.Size(206, 40);
+            this.btnCreateQueues.Size = new System.Drawing.Size(220, 40);
             this.btnCreateQueues.TabIndex = 2;
             this.btnCreateQueues.Text = "Create Queues";
             this.btnCreateQueues.UseVisualStyleBackColor = true;
@@ -72,9 +78,9 @@
             // 
             // btnBindQueues
             // 
-            this.btnBindQueues.Location = new System.Drawing.Point(61, 188);
+            this.btnBindQueues.Location = new System.Drawing.Point(12, 188);
             this.btnBindQueues.Name = "btnBindQueues";
-            this.btnBindQueues.Size = new System.Drawing.Size(206, 36);
+            this.btnBindQueues.Size = new System.Drawing.Size(220, 40);
             this.btnBindQueues.TabIndex = 3;
             this.btnBindQueues.Text = "Bind Queues";
             this.btnBindQueues.UseVisualStyleBackColor = true;
@@ -82,25 +88,26 @@
             // 
             // txtBoxPublishEmail
             // 
-            this.txtBoxPublishEmail.Location = new System.Drawing.Point(61, 274);
+            this.txtBoxPublishEmail.Location = new System.Drawing.Point(12, 274);
             this.txtBoxPublishEmail.Name = "txtBoxPublishEmail";
-            this.txtBoxPublishEmail.Size = new System.Drawing.Size(225, 22);
+            this.txtBoxPublishEmail.Size = new System.Drawing.Size(400, 22);
             this.txtBoxPublishEmail.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 255);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Publish Email";
             // 
             // btnPublishEmail
             // 
-            this.btnPublishEmail.Location = new System.Drawing.Point(166, 313);
+            this.btnPublishEmail.Location = new System.Drawing.Point(262, 315);
             this.btnPublishEmail.Name = "btnPublishEmail";
-            this.btnPublishEmail.Size = new System.Drawing.Size(120, 29);
+            this.btnPublishEmail.Size = new System.Drawing.Size(150, 35);
             this.btnPublishEmail.TabIndex = 6;
             this.btnPublishEmail.Text = "Publish Email";
             this.btnPublishEmail.UseVisualStyleBackColor = true;
@@ -109,34 +116,99 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 371);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(19, 369);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.Size = new System.Drawing.Size(94, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Publish SMS";
             // 
             // txtBoxPublishSms
             // 
-            this.txtBoxPublishSms.Location = new System.Drawing.Point(66, 405);
+            this.txtBoxPublishSms.Location = new System.Drawing.Point(15, 388);
             this.txtBoxPublishSms.Name = "txtBoxPublishSms";
-            this.txtBoxPublishSms.Size = new System.Drawing.Size(220, 22);
+            this.txtBoxPublishSms.Size = new System.Drawing.Size(400, 22);
             this.txtBoxPublishSms.TabIndex = 8;
             // 
             // btnPublishSMS
             // 
-            this.btnPublishSMS.Location = new System.Drawing.Point(177, 450);
+            this.btnPublishSMS.Location = new System.Drawing.Point(262, 431);
             this.btnPublishSMS.Name = "btnPublishSMS";
-            this.btnPublishSMS.Size = new System.Drawing.Size(109, 33);
+            this.btnPublishSMS.Size = new System.Drawing.Size(150, 35);
             this.btnPublishSMS.TabIndex = 9;
             this.btnPublishSMS.Text = "Publish SMS";
             this.btnPublishSMS.UseVisualStyleBackColor = true;
             this.btnPublishSMS.Click += new System.EventHandler(this.btnPublishSMS_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(466, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Email Messages";
+            // 
+            // lstEmailMessages
+            // 
+            this.lstEmailMessages.FormattingEnabled = true;
+            this.lstEmailMessages.ItemHeight = 16;
+            this.lstEmailMessages.Location = new System.Drawing.Point(469, 43);
+            this.lstEmailMessages.Name = "lstEmailMessages";
+            this.lstEmailMessages.Size = new System.Drawing.Size(485, 148);
+            this.lstEmailMessages.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(469, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "SMS Messages";
+            // 
+            // lstSmsMessages
+            // 
+            this.lstSmsMessages.FormattingEnabled = true;
+            this.lstSmsMessages.ItemHeight = 16;
+            this.lstSmsMessages.Location = new System.Drawing.Point(472, 255);
+            this.lstSmsMessages.Name = "lstSmsMessages";
+            this.lstSmsMessages.Size = new System.Drawing.Size(485, 148);
+            this.lstSmsMessages.TabIndex = 13;
+            // 
+            // btnSubscribeEmailQueue
+            // 
+            this.btnSubscribeEmailQueue.Location = new System.Drawing.Point(472, 431);
+            this.btnSubscribeEmailQueue.Name = "btnSubscribeEmailQueue";
+            this.btnSubscribeEmailQueue.Size = new System.Drawing.Size(199, 39);
+            this.btnSubscribeEmailQueue.TabIndex = 14;
+            this.btnSubscribeEmailQueue.Text = "Subscribe Email Queue";
+            this.btnSubscribeEmailQueue.UseVisualStyleBackColor = true;
+            this.btnSubscribeEmailQueue.Click += new System.EventHandler(this.btnSubscribeEmailQueue_Click);
+            // 
+            // btnSubscribeSmsQueue
+            // 
+            this.btnSubscribeSmsQueue.Location = new System.Drawing.Point(755, 431);
+            this.btnSubscribeSmsQueue.Name = "btnSubscribeSmsQueue";
+            this.btnSubscribeSmsQueue.Size = new System.Drawing.Size(199, 39);
+            this.btnSubscribeSmsQueue.TabIndex = 15;
+            this.btnSubscribeSmsQueue.Text = "Subscribe SMS Queue";
+            this.btnSubscribeSmsQueue.UseVisualStyleBackColor = true;
+            this.btnSubscribeSmsQueue.Click += new System.EventHandler(this.btnSubscribeSmsQueue_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 527);
+            this.ClientSize = new System.Drawing.Size(993, 527);
+            this.Controls.Add(this.btnSubscribeSmsQueue);
+            this.Controls.Add(this.btnSubscribeEmailQueue);
+            this.Controls.Add(this.lstSmsMessages);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lstEmailMessages);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnPublishSMS);
             this.Controls.Add(this.txtBoxPublishSms);
             this.Controls.Add(this.label2);
@@ -148,7 +220,7 @@
             this.Controls.Add(this.btnCreateExchange);
             this.Controls.Add(this.btnConnectRabbitMq);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "RabbitMqApp";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +238,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxPublishSms;
         private System.Windows.Forms.Button btnPublishSMS;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lstEmailMessages;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox lstSmsMessages;
+        private System.Windows.Forms.Button btnSubscribeEmailQueue;
+        private System.Windows.Forms.Button btnSubscribeSmsQueue;
     }
 }
 
