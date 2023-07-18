@@ -47,5 +47,14 @@ namespace RabbitMQApp
                 channel.QueueDeclare("Sms", true, false, false);
             }
         }
+
+        private void btnBindQueues_Click(object sender, EventArgs e)
+        {
+            using (var channel = _rabbitMqConnection.CreateModel())
+            {
+                channel.QueueBind("Email", "CustomerNotification", "email");
+                channel.QueueBind("Sms", "CustomerNotification", "sms");
+            }
+        }
     }
 }

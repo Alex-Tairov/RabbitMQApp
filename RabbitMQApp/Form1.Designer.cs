@@ -31,6 +31,7 @@
             this.btnConnectRabbitMq = new System.Windows.Forms.Button();
             this.btnCreateExchange = new System.Windows.Forms.Button();
             this.btnCreateQueues = new System.Windows.Forms.Button();
+            this.btnBindQueues = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnectRabbitMq
@@ -63,11 +64,22 @@
             this.btnCreateQueues.UseVisualStyleBackColor = true;
             this.btnCreateQueues.Click += new System.EventHandler(this.btnCreateQueues_Click);
             // 
+            // btnBindQueues
+            // 
+            this.btnBindQueues.Location = new System.Drawing.Point(64, 315);
+            this.btnBindQueues.Name = "btnBindQueues";
+            this.btnBindQueues.Size = new System.Drawing.Size(206, 63);
+            this.btnBindQueues.TabIndex = 3;
+            this.btnBindQueues.Text = "Bind Queues";
+            this.btnBindQueues.UseVisualStyleBackColor = true;
+            this.btnBindQueues.Click += new System.EventHandler(this.btnBindQueues_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBindQueues);
             this.Controls.Add(this.btnCreateQueues);
             this.Controls.Add(this.btnCreateExchange);
             this.Controls.Add(this.btnConnectRabbitMq);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button btnConnectRabbitMq;
         private System.Windows.Forms.Button btnCreateExchange;
         private System.Windows.Forms.Button btnCreateQueues;
+        private System.Windows.Forms.Button btnBindQueues;
     }
 }
 
