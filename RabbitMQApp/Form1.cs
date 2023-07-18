@@ -56,5 +56,29 @@ namespace RabbitMQApp
                 channel.QueueBind("Sms", "CustomerNotification", "sms");
             }
         }
+
+        private void btnPublishEmail_Click(object sender, EventArgs e)
+        {
+            using (var channel = _rabbitMqConnection.CreateModel())
+            {
+                var message = txtBoxPublishEmail.Text;
+
+                var properties = channel.CreateBasicProperties();
+                properties.DeliveryMode = 2;
+                channel.BasicPublish("CustomerNotification", "email", properties, Encoding.UTF8.GetBytes(message));
+            }
+        }
+
+        private void btnPublishSMS_Click(object sender, EventArgs e)
+        {
+            using (var channel = _rabbitMqConnection.CreateModel())
+            {
+                var message = txtBoxPublishSms.Text;
+
+                var properties = channel.CreateBasicProperties();
+                properties.DeliveryMode = 2;
+                channel.BasicPublish("CustomerNotification", "sms", properties, Encoding.UTF8.GetBytes(message));
+            }
+        }
     }
 }
